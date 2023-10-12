@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Stitch Patterns</title>
+    <style>
+      *{font-size:16pt; background-color: whitesmoke; font-family: 'Courier New', Courier, monospace;}
+      canvas{border: 2px solid black; background-color: whitesmoke;}
+    </style>
+  </head>
+
+  <body>
+    <h1>Stitch Pattern Generator !</h1>
+
+    <canvas width="600" height="600"></canvas>
+
+    <form id="specs">
+      <div id="gen-type">
+        <label for="gen-type">Generation Type:</label><br>
+        <input type="radio" id="hito" name="gen-type" value="hito" checked>
+        <label for="html">Hitomezashi</label><br>
+        <input type="radio" id="multi" name="gen-type" value="multi">
+        <label for="css">Multi-colored</label><br><br>
+      </div>
+
+      <div id="size-params">
+        <label for="width">width:</label>
+        <input type="number" id="width" name="width" value="20"><br>
+        <label for="height">height:</label>
+        <input type="number" name="height" id="height" value="20"><br>
+      </div>
+
+      <div id="colors">
+        <label for="num-colors">colors:</label>
+        <input type="number" name="num-colors" id="num-colors" value="2"><br>
+      </div>
+
+      <input id="submit" type="button" value="submit">
+    </form>
+
+    <p id="out">Output Here</p>
+  </body>
+
+  <script type="module" src="./utils.js"></script>
+  <script type="module" src="./stitch-patterns.js"></script>
+</html>

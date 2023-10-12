@@ -1,0 +1,2 @@
+I have a script that generates a string containing the svg, which can be copied/pasted into its own file after it's been generated.
+This is the guide I referenced: https://developer.mozilla.org/en-US/docs/Web/SVG/Tutorial/Getting_Started

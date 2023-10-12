@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <style>
+            *{background-color: black;}
+
+            canvas[resize] {
+                width: 100%;
+                height: 100%;
+            }
+
+            canvas{
+                background-color: whitesmoke;
+            }
+        </style>
+
+        <!-- Load the Paper.js library
+        <script type="text/javascript" src="/js/paper.js"></script>
+        Define inlined PaperScript associate it with myCanvas 
+        <script type="text/paperscript" src="js/svg-gen.js" canvas="#myCanvas"></script> -->
+    </head>
+    
+    <body>
+        <div id="place"></div>
+        <!-- <canvas id="myCanvas" resize></canvas> -->
+        <!-- <div id="place">SVG HERE <svg version="1.1" width="500" height="500" xmlns="http://www.w3.org/2000/svg"><rect width="100%" height="100%" fill="white"/></svg></div> -->
+    </body>
+
+    <script>
+        "use strict";
+        let outString =
+                '<svg version="1.1" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"> ';
+
+            outString = outString + `<rect width="100%" height="100%" fill="white"/>`;
+
+            outString = outString + `<path d="M 0 100 C 0 500, 200 100, 300 500, 400 100, 500 500, 600 100, 700 500, 800 100, 900 500, 1000 100, 1100 500, 1200 100, 1300 500, 1400 100, 1500 500, 1600 100" stroke="red" fill="transparent" stroke-width="10"/>`
+
+            let barSubStr = "";
+            for(let i = 0; i < 100; i++){
+                barSubStr = barSubStr + `<rect x="${i * 50}" y="0" width="30" height="2000" fill="blue" opacity="50%"/>`;
+                barSubStr = barSubStr + `<rect x="${i * 50 + 10}" y="0" width="10" height="2000" fill="yellow" opacity="50%"/>`;
+            }
+            outString = outString + barSubStr;
+
+            let rad = 3;
+            let circleSubStr = "";
+            let opacityTracker = 100;
+            for(let i = 0; i < 1000; i++){
+                for(let j = 0; j < 100; j++){
+                    circleSubStr = circleSubStr + `<circle cx="${i * 10}" cy="${j * 10}" r="${rad}" opacity="${opacityTracker}%"/>`;
+                    opacityTracker--;
+                }
+                opacityTracker = 100;
+            }
+            outString = outString + circleSubStr;
+
+            outString = outString + "</svg>";
+
+            let place = document.querySelector("#place");
+            place.innerHTML = outString;
+            console.log(outString);
+    </script>
+</html>

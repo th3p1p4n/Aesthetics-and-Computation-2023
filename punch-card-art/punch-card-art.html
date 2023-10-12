@@ -1,0 +1,51 @@
+<html>
+    <head>
+        <style>
+            *{
+                background-color: whitesmoke;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            #params, #place, #data-block{
+                border: 3px solid black;
+                padding: 1%;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>Noisy Stitches</h1>
+        <p>Adjust the parameters below to create your own stitch pattern using perlin noise.</p>
+        <p><em><a href="https://github.com/josephg/noisejs">Noise library  by josephg.</a></em></p>
+        <div id="place"></div>
+        <div id="params">
+            <label for="width">Width:</label>
+            <input type="number" id="width" value="400"><br>
+            <label for="height">Height:</label>
+            <input type="number" id="height" value="400"><br>
+            <label for="string-width">String Width:</label>
+            <input type="number" id="string-width" value="2"><br>
+            <label for="zoom">Noise Zoom (2-30 work best):</label>
+            <input type="number" id="zoom" value="10"><br>
+            <label for="color">String Color:</label>
+            <input type="color" id="string-color" name="string-color" value="#FF0000"><br>
+            <label for="bg-color">Background Color:</label>
+            <input type="color" id="bg-color" name="bg-color" value="#FFFFFF"><br>
+            <label for="point-color">Point Color:</label>
+            <input type="color" id="point-color" name="point-color" value="#000000"><br><br>
+            <button id="generate">Gimme Another!</button><br><br>      
+        </div>
+        <div id="data-block">
+            <h2>SVG Data (copy/paste into a file)</h2>
+            <code id="svg-data">
+                SVG data will appear here.
+            </code>
+        </div>
+    </body>
+    <footer>        
+        <p>©Andrew Broderick, RIT Spring 2023</p>
+    </footer>
+
+    <!-- https://github.com/josephg/noisejs -->
+    <script src="/scripts/noisejs-master/perlin.js"></script>
+    <script src="/scripts/svg-gen.js"></script>
+</html>

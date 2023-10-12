@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <style>
+            *{
+                background-color: whitesmoke;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            #params, #place, #data-block{
+                border: 3px solid black;
+                padding: 1%;
+            }
+            #generate{
+                margin: 1rem;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <label for="iterations">Number of Iterations</label>
+        <input id="iterations" type="number" default="1">
+        <button id="generate">Generate</button>
+        <div id="place">
+            SVG will appear here.
+        </div>
+        <div id="data-block">
+            <h2>SVG Data (copy/paste into a file)</h2>
+            <code id="svg-data">
+                SVG data will appear here.
+            </code>
+        </div>
+    </body>
+    <footer>        
+        <p>©Andrew Broderick, RIT Spring 2023</p>
+    </footer>
+
+    <!-- https://github.com/josephg/noisejs -->
+    <script src="/scripts/noisejs-master/perlin.js"></script>
+    <script src="/scripts/l-system-gen.js"></script>
+</html>

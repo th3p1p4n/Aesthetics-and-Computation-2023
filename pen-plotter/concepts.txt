@@ -1,0 +1,20 @@
+see MyCourses discussion post
+
+for multiple colors, need multiple top-level groups:
+<svg>
+  <g>
+    ...
+  </g>
+  <g>
+    ...
+  </g>
+</svg>
+
+https://twitter.com/ippsketch/status/1414947706968199170 --> triangle tiles
+
+traversal that starts in a corner and picks whether it draws one of two types of tiles?
+--> start with a complete svg then use optimization settings and interrupt partway through.
+
+oblique tiles? http://tamivox.org/darlene/truchet_oblique/
+
+spaghetti hexes!

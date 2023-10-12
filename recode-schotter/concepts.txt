@@ -1,0 +1,12 @@
+unraveling string
+angular, with cutoffs in the tile
+arrows
+staircases
+
+
+_PLANS_
+design a tile and get its paths
+array of tiles
+tile objects with x/y position, rotation, displacement/skew?
+noise determines "chaos": multiply noise val for that point by a number that goes up as you move down each row
+use tile obj details to draw tiles, maybe transform a container with the tile details inside of it instead of modifying the tile source code

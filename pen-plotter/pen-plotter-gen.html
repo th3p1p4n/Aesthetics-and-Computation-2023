@@ -1,0 +1,52 @@
+<html>
+    <head>
+        <style>
+            *{
+                background-color: whitesmoke;
+                font-family: 'Courier New', Courier, monospace;
+            }
+            #params, #place, #data-block{
+                border: 3px solid black;
+                padding: 1%;
+            }
+            #generate{
+                margin: 1rem;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <label for="width">Width:</label>
+        <input id="width" type="number" value="3">
+        <label for="height">Height:</label>
+        <input id="height" type="number" value="3">
+        <br>
+        <label for="color">Box Color:</label>
+        <input id="color" type="color" value="#112d5a">
+        <br>
+        <label for="use-noise">Use noise to determine rotation?:</label>
+        <input id="use-noise" type="checkbox" checked>
+        <br>
+        <label for="test">Use test tile? (for debug purposes shhh):</label>
+        <input id="test" type="checkbox">
+        <br>
+        <button id="generate">Generate</button>
+        <div id="place">
+            SVG will appear here.
+        </div>
+        <div id="data-block">
+            <h2>SVG Data (copy/paste into a file)</h2>
+            <code id="svg-data">
+                SVG data will appear here.
+            </code>
+        </div>
+    </body>
+    <footer>        
+        <p>©Andrew Broderick, RIT Spring 2023</p>
+    </footer>
+
+    <!-- https://github.com/josephg/noisejs -->
+    <script src="/scripts/noisejs-master/perlin.js"></script>
+    <script src="/scripts/plotter-gen.js"></script>
+</html>

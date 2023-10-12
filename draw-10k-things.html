@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <script>
+    "use strict"
+
+    window.addEventListener("load", drawThings);
+
+    function drawThings(){
+        const canvas = document.querySelector("canvas");
+        if (canvas.getContext) {
+          const ctx = canvas.getContext("2d");
+
+          ctx.fillStyle = "rgba(256, 0, 0, 0.5)";
+          for(let i = 0; i < 500; i++){
+            for(let j = 0; j < 500; j++){
+                ctx.fillRect(i*5, j*5, 3, 3);
+            }
+          }
+
+          ctx.fillStyle = "rgba(0, 256, 0, 0.5)";
+          for(let i = 0; i < 500; i++){
+            for(let j = 0; j < 500; j++){
+                ctx.fillRect(i*5 + 2, j*5, 3, 3);
+            }
+          }
+
+          ctx.fillStyle = "rgba(0, 0, 256, 0.5)";
+          for(let i = 0; i < 500; i++){
+            for(let j = 0; j < 500; j++){
+                ctx.fillRect(i*5, j*5 + 2, 3, 3);
+            }
+          }
+
+          ctx.fillStyle = "rgba(0, 0, 0, 0.5)";
+          for(let i = 0; i < 500; i++){
+            for(let j = 0; j < 500; j++){
+                ctx.fillRect(i*5 + 2, j*5 + 2, 3, 3);
+            }
+          }
+        }
+    }
+  </script>
+
+  <head>
+    <meta charset="utf-8" />
+    <title>10k Things</title>
+    <style>
+      *{font-size:1.5em; background-color: darkblue;}
+      canvas{border: 5px solid black; background-color: whitesmoke;}
+    </style>
+  </head>
+
+  <body>
+    <h1>Ten-Thousand Things</h1>
+    <canvas width="3000" height="3000"></canvas>
+  </body>
+</html>

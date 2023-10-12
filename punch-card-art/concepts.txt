@@ -1,0 +1,9 @@
+randomly generated dots that are converted into text garble
+noise-generated dots
+text that is converted into dots by the program
+punch card font
+fake chat bot that only responds in punches
+
+randomly-generated punches (noise? or heavier chance of having a punch if there's already a punch there?) that are sewn together, like string art
+
+https://observablehq.com/@tstodter/assignment-make-punch-cards-pretty

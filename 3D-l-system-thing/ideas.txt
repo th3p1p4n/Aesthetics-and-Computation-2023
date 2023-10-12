@@ -1,0 +1,4 @@
+3d lsystem ideas (just needs to be some type of recursive generative system that produces a 3d model that you print):
+
+terrain
+plants! fictional?

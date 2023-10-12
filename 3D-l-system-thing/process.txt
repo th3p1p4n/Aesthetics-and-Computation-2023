@@ -1,0 +1,5 @@
+I started by looking at the demo files that openjscad.xyz provides. I found the dodecahedron to be particularly interesting, so I looked into whether there was already a known dodecahedron fractal. It turns out that the Sierpinski triangle fractal can also be applied in a similar manner to a dodecahedron. With this concept in mind, I took the provided demo code and used it to construct a class that could be used to produce a dodecahedron at any size and position.
+
+inspiration: https://blender.stackexchange.com/questions/243770/how-to-create-a-sierpinski-dodecahedron-fractal
+math reference: https://larryriddle.agnesscott.org/ifs/pentagon/pentagon.htm
+more reference: https://www.bellaard.com/snippets/Sierpinski%20dodecahedron/
